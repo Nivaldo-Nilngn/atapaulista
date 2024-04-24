@@ -38,42 +38,58 @@ switch (diaAtual.toLowerCase()) {
 
 
 var dayOfWeek = new Date().getDay();
-if (dayOfWeek == 6) { // se for sábado
-  var radio1 = document.getElementById("turma1");
-  if (radio1) {
-    radio1.value = "08H ÀS 10H";
-    radio1.nextElementSibling.innerText = "08H ÀS 10H";
-  }
+var radio5 = document.getElementById("Turma5"); // Corrigido para "Turma5"
+var radio6 = document.getElementById("ultimohorario"); // Corrigido para "ultimohorario"
+var radio3 = document.getElementById("turma3");
+var radio4 = document.getElementById("turma4");
 
-  var radio2 = document.getElementById("turma2");
-  if (radio2) {
-    radio2.value = "10H ÀS 12H";
-    radio2.nextElementSibling.innerText = "10H ÀS 12H";
+if (dayOfWeek == 3) { // Quarta-feira
+  if (radio5) {
+    radio5.innerHTML = `
+      <label for="turma5">
+        <input type="radio" name="Turma" id="turma5" value="17H ÀS 19H">
+        <span>17H ÀS 19H</span>
+      </label>
+    `;
   }
-
-  var radio3 = document.getElementById("turma3");
+  if (radio6) {
+    radio6.innerHTML = `
+      <label for="turma6">
+        <input type="radio" name="Turma" id="turma6" value="18H ÀS 20H">
+        <span>18H ÀS 20H</span>
+      </label>
+    `;
+  }
+} else if (dayOfWeek == 4 || dayOfWeek == 5) { // Quinta ou Sexta-feira
+  if (radio5) {
+    radio5.innerHTML = `
+      <label for="turma5">
+        <input type="radio" name="Turma" id="turma5" value="17H ÀS 19H">
+        <span>17H ÀS 19H</span>
+      </label>
+    `;
+  }
+} else if (dayOfWeek == 6) { // Sábado
   if (radio3) {
     radio3.value = "12H ÀS 14H";
     radio3.nextElementSibling.innerText = "12H ÀS 14H";
   }
 
-  var radio4 = document.getElementById("turma4");
   if (radio4) {
     radio4.value = "14H ÀS 16H";
     radio4.nextElementSibling.innerText = "14H ÀS 16H";
   }
 
-  var radio5 = document.getElementById("turma5");
   if (radio5) {
-    radio5.value = "16H ÀS 18H";
-    radio5.nextElementSibling.innerText = "16H ÀS 18H";
-  }
-
-  var radio6 = document.getElementById("ultimoHorario");
-  if (radio6) {
-    radio6.style.display = "none";
+    radio5.innerHTML = `
+      <label for="turma5">
+        <input type="radio" name="Turma" id="turma5" value="16H à 18H">
+        <span>16H à 18H</span>
+      </label>
+    `;
   }
 }
+
 
 
   const reloadDiv = document.createElement("div");
