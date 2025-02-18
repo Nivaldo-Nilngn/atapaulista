@@ -1,6 +1,6 @@
 # Sistema de Registro de Horários
 
-![Incentiva Cursos](/assets/ata.png)
+![Incentiva Cursos](/assets/img/ata.png)
 
 ## Descrição
 
