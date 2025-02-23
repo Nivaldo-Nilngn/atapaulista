@@ -6,6 +6,8 @@
 
 Este projeto é um sistema de registro de horários, permitindo a coleta e o envio de dados para o Google Sheets utilizando Google Apps Script. Ele facilita o monitoramento e controle de presença de alunos ou colaboradores, armazenando as informações de forma organizada.
 
+🔗 **[Teste o sistema aqui](https://ata-incentivacursos-paulista.netlify.app/)**
+
 ## Funcionalidades
 
 - **Registro de entrada e saída.**
